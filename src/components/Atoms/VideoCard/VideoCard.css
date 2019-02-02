@@ -1,0 +1,11 @@
+.video-card {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.video-card__img {
+  cursor: pointer;
+  height: auto;
+  width: 80%;
+}

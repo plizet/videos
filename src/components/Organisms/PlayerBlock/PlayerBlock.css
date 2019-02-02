@@ -1,0 +1,10 @@
+.player-block {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.player-block__description {
+  font-size: 1.3rem;
+  margin: 2%;
+}

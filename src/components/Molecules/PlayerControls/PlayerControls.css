@@ -1,0 +1,55 @@
+.player-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-controls__progress {
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 5px;
+  transition: height 0.2s;
+  vertical-align: middle;
+  width: 61%;
+}
+
+.player-controls__progress::-moz-progress-bar {
+  background-image: -moz-linear-gradient(left, #b30000, #ff4a4a);
+  border-radius: 10px;
+}
+
+.player-controls__progress::-webkit-progress-bar {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.player-controls__progress::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(left, #b30000, #ff4a4a);
+  border-radius: 10px;
+}
+
+.player-controls__progress:hover {
+  height: 8px;
+  transition: height 0.2s;
+}
+
+.player-controls__time {
+  font-size: 0.8rem;
+}
+
+.player-controls__time--current {
+  margin-right: 5px;
+}
+.player-controls__time--end {
+  margin-left: 5px;
+}
+
+@media (max-width: 992px) {
+  .player-controls__progress {
+    width: 80%;
+  }
+  .player-controls__time {
+    margin: 0 5px;
+  }
+}

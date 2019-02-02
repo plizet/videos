@@ -1,0 +1,52 @@
+.video-app {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 33% 100px auto;
+  grid-template-areas:
+    '. player .'
+    '. filters .'
+    '. cards .';
+}
+
+.video-app__player {
+  grid-area: player;
+  text-align: center;
+}
+
+.video-app__filters {
+  grid-area: filters;
+}
+
+.video-app__grid {
+  display: grid;
+  justify-content: center;
+  grid-area: cards;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 992px) {
+  .video-app__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-app__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-app {
+    grid-template-areas:
+      'player player player'
+      '. filters .'
+      '. cards .';
+  }
+
+  .video-app__grid {
+    grid-template-columns: 70%;
+  }
+}

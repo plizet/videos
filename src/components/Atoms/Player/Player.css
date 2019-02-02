@@ -1,0 +1,10 @@
+.player {
+  height: auto;
+  width: 70%;
+}
+
+@media (max-width: 992px) {
+  .player {
+    width: 100%;
+  }
+}

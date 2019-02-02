@@ -1,0 +1,15 @@
+.filters {
+  height: 100%;
+}
+
+.filters__form {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.filters__select {
+  height: 30px;
+  width: 150px;
+}
