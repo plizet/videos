@@ -9,8 +9,35 @@
 }
 
 .video-app__player {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   grid-area: player;
+  justify-content: center;
   text-align: center;
+}
+
+.video-app__title-block {
+  align-items: center;
+  color: var(--title-text);
+  display: flex;
+  width: 70%;
+}
+.video-app__title {
+  font-size: 1.5rem;
+}
+.video-app__subtitle {
+  font-size: 1.2rem;
+}
+@media (max-width: 992px) {
+  .video-app__title-block {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .video-app__title-block {
+    justify-content: center;
+  }
 }
 
 .video-app__filters {

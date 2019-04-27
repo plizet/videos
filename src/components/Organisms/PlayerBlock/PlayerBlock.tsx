@@ -12,7 +12,7 @@ interface Props {
   video: VideoInfos;
 }
 const PlayerBlock = ({
-  video: { id, description, urlName, ...props }
+  video: { id, description, urlName, thumbnail, ...props }
 }: Props) => {
   const [player, setPlayer] = useState<HTMLVideoElement | null>(null);
 

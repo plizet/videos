@@ -62,11 +62,18 @@ class VideoApp extends Component<Props> {
     return (
       <div className='video-app'>
         <div className='video-app__player'>
-          {video && <h1>{video.title}</h1>}
-          {video && <PlayerBlock />}
+          {video && (
+            <>
+            <div className='video-app__title-block'>
+              <h1 className='video-app__title'>{video.title}</h1>
+              {video.subtitle && <h2 className='video-app__subtitle'> - {video.subtitle}</h2>}
+            </div>
+            <PlayerBlock />
+          </>
+          )}
         </div>
 
-        <div className='video-app__filters'>
+        {/*<div className='video-app__filters'>
           <FiltersBlock />
         </div>
         <div className='video-app__grid'>
@@ -78,7 +85,7 @@ class VideoApp extends Component<Props> {
                 video={video}
               />
             ))}
-        </div>
+            </div>*/}
       </div>
     );
   }

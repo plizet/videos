@@ -14,6 +14,7 @@ export interface VideoInfos extends Video {
   year?: string;
   description?: string;
   id: number;
+  subtitle?: string;
   title?: string;
   thumbnail?: string;
   urlName?: string;

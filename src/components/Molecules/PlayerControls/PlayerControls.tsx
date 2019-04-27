@@ -153,11 +153,11 @@ export default ({ player }: Props) => {
         </span>
       </div>
       <div>
-        <PlayerControlButton
+        {/*<PlayerControlButton
           title={PREV}
           src='./assets/svg/controls/prev.svg'
           onClick={handleClick}
-        />
+        />*/}
         <PlayerControlButton
           title={PLAY_PAUSE}
           src={
@@ -174,7 +174,13 @@ export default ({ player }: Props) => {
         />
         <PlayerControlButton
           title={MUTE}
-          src='./assets/svg/controls/mute.svg'
+          src={
+            player.muted || !player.volume
+              ? './assets/svg/controls/mute.svg'
+              : player.volume > 0.5
+              ? './assets/svg/controls/volume-adjustment.svg'
+              : './assets/svg/controls/low-volume.svg'
+          }
           onClick={handleClick}
         />
         <input
@@ -186,18 +192,15 @@ export default ({ player }: Props) => {
           ref={volumeElement}
           step='1'
           type='range'
-          value={player.volume * 100}
+          value={player.muted ? 0 : player.volume * 100}
         />
-        <PlayerControlButton
+        {/*<PlayerControlButton
           title={FULLSCREEN}
           src='./assets/svg/controls/maximize.svg'
           onClick={handleClick}
-        />
-        <PlayerControlButton
-          title={NEXT}
-          src='./assets/svg/controls/next.svg'
-          onClick={handleClick}
-        />
+        />*/}
+        {/*<PlayerControlButton title={NEXT} src='./assets/svg/controls/next.svg' onClick={handleClick} />
+         */}
       </div>
     </div>
   );

@@ -1,6 +1,21 @@
+html {
+  --red: #961f00;
+  --black: #000;
+  --dark-blue: #21252b;
+  --light-grey: #eee;
+  --white: #fff;
+
+  --main-bg: var(--light-grey);
+  --main-text: var(--dark-blue);
+  --main-link: var(--red);
+  --title-text: var(--red);
+  --header-bg: var(--red);
+  --header-text: var(--light-grey);
+}
+
 body {
-  background-color: #464646;
-  color: #dedede;
+  background-color: var(--main-bg);
+  color: var(--main-text);
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
@@ -17,7 +32,7 @@ a:focus,
 button:focus,
 a:active,
 button:active {
-  border: 1px solid #b30000;
+  border: 1px solid var(--red);
 }
 
 @media (prefers-reduced-motion: reduce) {
