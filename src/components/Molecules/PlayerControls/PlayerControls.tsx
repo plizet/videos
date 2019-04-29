@@ -55,8 +55,8 @@ export default ({ player }: Props) => {
 
   const handleVolume = () => {
     if (player && volumeElement.current) {
-      // @ts-ignore
-      player.volume = volumeElement.current.value / 100;
+      console.log(typeof volumeElement.current.value);
+      player.volume = Number(volumeElement.current.value) / 100;
     }
   };
 
@@ -90,7 +90,6 @@ export default ({ player }: Props) => {
       ms ||
       webkitEnabled
     );
-    console.log(fullScreenEnabled);
   };
 
   const handleClick = (type: string) => {

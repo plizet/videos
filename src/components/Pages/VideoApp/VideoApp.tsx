@@ -64,28 +64,14 @@ class VideoApp extends Component<Props> {
         <div className='video-app__player'>
           {video && (
             <>
-            <div className='video-app__title-block'>
-              <h1 className='video-app__title'>{video.title}</h1>
-              {video.subtitle && <h2 className='video-app__subtitle'> - {video.subtitle}</h2>}
-            </div>
-            <PlayerBlock />
-          </>
+              <div className='video-app__title-block'>
+                <h1 className='video-app__title'>{video.title}</h1>
+                {video.subtitle && <h2 className='video-app__subtitle'>&nbsp;-&nbsp;{video.subtitle}</h2>}
+              </div>
+              <PlayerBlock />
+            </>
           )}
         </div>
-
-        {/*<div className='video-app__filters'>
-          <FiltersBlock />
-        </div>
-        <div className='video-app__grid'>
-          {filteredVideos &&
-            filteredVideos.map(video => (
-              <VideoCard
-                key={video.id}
-                onClick={this.handleClick}
-                video={video}
-              />
-            ))}
-            </div>*/}
       </div>
     );
   }
